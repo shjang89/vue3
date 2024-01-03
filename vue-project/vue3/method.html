@@ -1,0 +1,23 @@
+<div id="app">
+    <p>{{count}}</p>
+    <!-- v-on을 이용해서 버튼의 click이벤트를 적용 할 수 있다. -->
+    <!-- v-if, v-else, v-for, v-bind -->
+    <button v-on:click="addCount">+</button>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+    Vue.createApp({
+        data() {
+            return {
+                count : 0
+            }
+        },
+        methods: {
+            addCount(){
+                this.count++;
+            }
+        }
+    }).mount('#app'); 
+</script>

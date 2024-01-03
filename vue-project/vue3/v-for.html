@@ -1,0 +1,22 @@
+<div id="app">
+    <!-- {{message}} -->
+    <ul>
+        <!-- v-for : v-for 디렉티브는 Vue.js에서 배열이나 객체의 요소를 반복하여 렌더링할 때 사용 -->
+        <li v-for="item in items">
+            {{item}}
+        </li>
+    </ul>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+    Vue.createApp({
+        data(){
+            return{
+                items:['삼성', '네이버', '인프런']
+            }
+        }
+    }).mount('#app');
+
+</script>
