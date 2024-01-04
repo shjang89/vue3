@@ -1,0 +1,35 @@
+<div id="app">
+    <!-- 1. v-if -->
+
+    <p v-if="login">로그인 되었습니다</p>
+    <p v-else>로그인 하세요</p>
+    <!-- v-on : 이벤트 제어하는 디렉티브 -->
+    <button v-on:click = "loginUser">로그인</button>
+
+    <hr>
+
+    <!-- 2. v-show -->
+    <p v-show = "login">로그인 되었습니다</p>
+    <button v-on:click = "loginUser">로그인</button>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+    // Vue.createApp -> 인스턴스
+    Vue.createApp({
+        // data -> 속성
+        data() {
+            return {
+                login: false
+            }
+        },
+    methods: {
+        loginUser() {
+            this.login = !this.login;
+        }
+    }
+    
+    }).mount('#app');
+    
+</script>
